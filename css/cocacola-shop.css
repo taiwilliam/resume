@@ -1,0 +1,1188 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*reset*/
+
+body{
+	font-family: 微軟正黑體;
+}
+
+img{
+	max-width: 100%;
+	height: auto;
+}
+
+/*pure css*/
+
+			/*form*/
+/*!
+Pure v1.0.0
+Copyright 2013 Yahoo!
+Licensed under the BSD License.
+https://github.com/yahoo/pure/blob/master/LICENSE.md
+*/
+/*csslint box-model:false*/
+/*
+Box-model set to false because we're setting a height on select elements, which
+also have border and padding. This is done because some browsers don't render
+the padding. We explicitly set the box-model for select elements to border-box,
+so we can ignore the csslint warning.
+*/
+
+.pure-form input[type="text"],
+.pure-form input[type="password"],
+.pure-form input[type="email"],
+.pure-form input[type="url"],
+.pure-form input[type="date"],
+.pure-form input[type="month"],
+.pure-form input[type="time"],
+.pure-form input[type="datetime"],
+.pure-form input[type="datetime-local"],
+.pure-form input[type="week"],
+.pure-form input[type="number"],
+.pure-form input[type="search"],
+.pure-form input[type="tel"],
+.pure-form input[type="color"],
+.pure-form select,
+.pure-form textarea {
+    padding: 0.5em 0.6em;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-shadow: inset 0 1px 3px #ddd;
+    border-radius: 4px;
+    vertical-align: middle;
+    box-sizing: border-box;
+}
+
+/*
+Need to separate out the :not() selector from the rest of the CSS 2.1 selectors
+since IE8 won't execute CSS that contains a CSS3 selector.
+*/
+.pure-form input:not([type]) {
+    padding: 0.5em 0.6em;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-shadow: inset 0 1px 3px #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+
+/* Chrome (as of v.32/34 on OS X) needs additional room for color to display. */
+/* May be able to remove this tweak as color inputs become more standardized across browsers. */
+.pure-form input[type="color"] {
+    padding: 0.2em 0.5em;
+}
+
+
+.pure-form input[type="text"]:focus,
+.pure-form input[type="password"]:focus,
+.pure-form input[type="email"]:focus,
+.pure-form input[type="url"]:focus,
+.pure-form input[type="date"]:focus,
+.pure-form input[type="month"]:focus,
+.pure-form input[type="time"]:focus,
+.pure-form input[type="datetime"]:focus,
+.pure-form input[type="datetime-local"]:focus,
+.pure-form input[type="week"]:focus,
+.pure-form input[type="number"]:focus,
+.pure-form input[type="search"]:focus,
+.pure-form input[type="tel"]:focus,
+.pure-form input[type="color"]:focus,
+.pure-form select:focus,
+.pure-form textarea:focus {
+    outline: 0;
+    border-color: #129FEA;
+}
+
+/*
+Need to separate out the :not() selector from the rest of the CSS 2.1 selectors
+since IE8 won't execute CSS that contains a CSS3 selector.
+*/
+.pure-form input:not([type]):focus {
+    outline: 0;
+    border-color: #129FEA;
+}
+
+.pure-form input[type="file"]:focus,
+.pure-form input[type="radio"]:focus,
+.pure-form input[type="checkbox"]:focus {
+    outline: thin solid #129FEA;
+    outline: 1px auto #129FEA;
+}
+.pure-form .pure-checkbox,
+.pure-form .pure-radio {
+    margin: 0.5em 0;
+    display: block;
+}
+
+.pure-form input[type="text"][disabled],
+.pure-form input[type="password"][disabled],
+.pure-form input[type="email"][disabled],
+.pure-form input[type="url"][disabled],
+.pure-form input[type="date"][disabled],
+.pure-form input[type="month"][disabled],
+.pure-form input[type="time"][disabled],
+.pure-form input[type="datetime"][disabled],
+.pure-form input[type="datetime-local"][disabled],
+.pure-form input[type="week"][disabled],
+.pure-form input[type="number"][disabled],
+.pure-form input[type="search"][disabled],
+.pure-form input[type="tel"][disabled],
+.pure-form input[type="color"][disabled],
+.pure-form select[disabled],
+.pure-form textarea[disabled] {
+    cursor: not-allowed;
+    background-color: #eaeded;
+    color: #cad2d3;
+}
+
+/*
+Need to separate out the :not() selector from the rest of the CSS 2.1 selectors
+since IE8 won't execute CSS that contains a CSS3 selector.
+*/
+.pure-form input:not([type])[disabled] {
+    cursor: not-allowed;
+    background-color: #eaeded;
+    color: #cad2d3;
+}
+.pure-form input[readonly],
+.pure-form select[readonly],
+.pure-form textarea[readonly] {
+    background-color: #eee; /* menu hover bg color */
+    color: #777; /* menu text color */
+    border-color: #ccc;
+}
+
+.pure-form input:focus:invalid,
+.pure-form textarea:focus:invalid,
+.pure-form select:focus:invalid {
+    color: #b94a48;
+    border-color: #e9322d;
+}
+.pure-form input[type="file"]:focus:invalid:focus,
+.pure-form input[type="radio"]:focus:invalid:focus,
+.pure-form input[type="checkbox"]:focus:invalid:focus {
+    outline-color: #e9322d;
+}
+.pure-form select {
+    /* Normalizes the height; padding is not sufficient. */
+    height: 2.25em;
+    border: 1px solid #ccc;
+    background-color: white;
+}
+.pure-form select[multiple] {
+    height: auto;
+}
+.pure-form label {
+    margin: 0.5em 0 0.2em;
+}
+.pure-form fieldset {
+    margin: 0;
+    padding: 0.35em 0 0.75em;
+    border: 0;
+}
+.pure-form legend {
+    display: block;
+    width: 100%;
+    padding: 0.3em 0;
+    margin-bottom: 0.3em;
+    color: #333;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.pure-form-stacked input[type="text"],
+.pure-form-stacked input[type="password"],
+.pure-form-stacked input[type="email"],
+.pure-form-stacked input[type="url"],
+.pure-form-stacked input[type="date"],
+.pure-form-stacked input[type="month"],
+.pure-form-stacked input[type="time"],
+.pure-form-stacked input[type="datetime"],
+.pure-form-stacked input[type="datetime-local"],
+.pure-form-stacked input[type="week"],
+.pure-form-stacked input[type="number"],
+.pure-form-stacked input[type="search"],
+.pure-form-stacked input[type="tel"],
+.pure-form-stacked input[type="color"],
+.pure-form-stacked input[type="file"],
+.pure-form-stacked select,
+.pure-form-stacked label,
+.pure-form-stacked textarea {
+    display: block;
+    margin: 0.25em 0;
+}
+
+/*
+Need to separate out the :not() selector from the rest of the CSS 2.1 selectors
+since IE8 won't execute CSS that contains a CSS3 selector.
+*/
+.pure-form-stacked input:not([type]) {
+    display: block;
+    margin: 0.25em 0;
+}
+.pure-form-aligned input,
+.pure-form-aligned textarea,
+.pure-form-aligned select,
+/* NOTE: pure-help-inline is deprecated. Use .pure-form-message-inline instead. */
+.pure-form-aligned .pure-help-inline,
+.pure-form-message-inline {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    vertical-align: middle;
+}
+.pure-form-aligned textarea {
+    vertical-align: top;
+}
+
+/* Aligned Forms */
+.pure-form-aligned .pure-control-group {
+    margin-bottom: 0.5em;
+}
+.pure-form-aligned .pure-control-group label {
+    text-align: right;
+    display: inline-block;
+    vertical-align: middle;
+    width: 10em;
+    margin: 0 1em 0 0;
+}
+.pure-form-aligned .pure-controls {
+    margin: 1.5em 0 0 11em;
+}
+
+/* Rounded Inputs */
+.pure-form input.pure-input-rounded,
+.pure-form .pure-input-rounded {
+    border-radius: 2em;
+    padding: 0.5em 1em;
+}
+
+/* Grouped Inputs */
+.pure-form .pure-group fieldset {
+    margin-bottom: 10px;
+}
+.pure-form .pure-group input,
+.pure-form .pure-group textarea {
+    display: block;
+    padding: 10px;
+    margin: 0 0 -1px;
+    border-radius: 0;
+    position: relative;
+    top: -1px;
+}
+.pure-form .pure-group input:focus,
+.pure-form .pure-group textarea:focus {
+    z-index: 3;
+}
+.pure-form .pure-group input:first-child,
+.pure-form .pure-group textarea:first-child {
+    top: 1px;
+    border-radius: 4px 4px 0 0;
+    margin: 0;
+}
+.pure-form .pure-group input:first-child:last-child,
+.pure-form .pure-group textarea:first-child:last-child {
+    top: 1px;
+    border-radius: 4px;
+    margin: 0;
+}
+.pure-form .pure-group input:last-child,
+.pure-form .pure-group textarea:last-child {
+    top: -2px;
+    border-radius: 0 0 4px 4px;
+    margin: 0;
+}
+.pure-form .pure-group button {
+    margin: 0.35em 0;
+}
+
+.pure-form .pure-input-1 {
+    width: 100%;
+}
+.pure-form .pure-input-3-4 {
+    width: 75%;
+}
+.pure-form .pure-input-2-3 {
+    width: 66%;
+}
+.pure-form .pure-input-1-2 {
+    width: 50%;
+}
+.pure-form .pure-input-1-3 {
+    width: 33%;
+}
+.pure-form .pure-input-1-4 {
+    width: 25%;
+}
+
+/* Inline help for forms */
+/* NOTE: pure-help-inline is deprecated. Use .pure-form-message-inline instead. */
+.pure-form .pure-help-inline,
+.pure-form-message-inline {
+    display: inline-block;
+    padding-left: 0.3em;
+    color: #666;
+    vertical-align: middle;
+    font-size: 0.875em;
+}
+
+/* Block help for forms */
+.pure-form-message {
+    display: block;
+    color: #666;
+    font-size: 0.875em;
+}
+
+@media only screen and (max-width : 480px) {
+    .pure-form button[type="submit"] {
+        margin: 0.7em 0 0;
+    }
+
+    .pure-form input:not([type]),
+    .pure-form input[type="text"],
+    .pure-form input[type="password"],
+    .pure-form input[type="email"],
+    .pure-form input[type="url"],
+    .pure-form input[type="date"],
+    .pure-form input[type="month"],
+    .pure-form input[type="time"],
+    .pure-form input[type="datetime"],
+    .pure-form input[type="datetime-local"],
+    .pure-form input[type="week"],
+    .pure-form input[type="number"],
+    .pure-form input[type="search"],
+    .pure-form input[type="tel"],
+    .pure-form input[type="color"],
+    .pure-form label {
+        margin-bottom: 0.3em;
+        display: block;
+    }
+
+    .pure-group input:not([type]),
+    .pure-group input[type="text"],
+    .pure-group input[type="password"],
+    .pure-group input[type="email"],
+    .pure-group input[type="url"],
+    .pure-group input[type="date"],
+    .pure-group input[type="month"],
+    .pure-group input[type="time"],
+    .pure-group input[type="datetime"],
+    .pure-group input[type="datetime-local"],
+    .pure-group input[type="week"],
+    .pure-group input[type="number"],
+    .pure-group input[type="search"],
+    .pure-group input[type="tel"],
+    .pure-group input[type="color"] {
+        margin-bottom: 0;
+    }
+
+    .pure-form-aligned .pure-control-group label {
+        margin-bottom: 0.3em;
+        text-align: left;
+        display: block;
+        width: 100%;
+    }
+
+    .pure-form-aligned .pure-controls {
+        margin: 1.5em 0 0 0;
+    }
+
+    /* NOTE: pure-help-inline is deprecated. Use .pure-form-message-inline instead. */
+    .pure-form .pure-help-inline,
+    .pure-form-message-inline,
+    .pure-form-message {
+        display: block;
+        font-size: 0.75em;
+        /* Increased bottom padding to make it group with its related input element. */
+        padding: 0.2em 0 0.8em;
+    }
+}
+			/*form*/
+
+/*pure css*/
+
+.fixclear{
+	clear: both;
+}
+
+.warp{
+	max-width: 1000px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.header{
+	background: #C50B1B;
+	right: 0;
+	left: 0;
+}
+
+.header-warp{
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+.header-warp h1 a{
+	width: 250px;
+	height: 140.56px;
+	background-image: url(../images/cocacola-logo5.png);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	text-indent: 101%;
+	overflow: hidden;
+	white-space: nowrap;
+	float: left;
+}
+
+.header-warp ul{
+	float: right;
+	padding-top: 14.63px;
+}
+
+.header-warp ul li{
+	padding-bottom: 10px;
+}
+
+.header-warp ul li img{
+	width: 20px;
+}
+
+.header-warp ul li:hover{
+	opacity: 0.6;
+}
+
+/*-----burgermenu-----*/
+.burger-menu{
+	position: relative;
+	float: right;
+	margin-right: 25px;
+	top: -35px;
+	/*right: -615px;*/
+	width: 50px;
+	/*height: 50px;*/
+	cursor: pointer;
+	display: none;
+}
+.burger{
+	position: absolute;
+	background: rgba(111,111,111,1);
+	width: 100%;
+	height: 10px;
+	top: 50%;
+	right: 0px;
+	margin-top: -5px;
+	opacity: 1;
+}
+.burger::before {
+	position: absolute;
+	background: rgba(111,111,111,1);
+	width: 50px;
+	height: 10px;
+	top: 20px;
+	content: "";
+	display: block;
+}
+.burger::after {
+	position: absolute;
+	background: rgba(111,111,111,1);
+	width: 50px;
+	height: 10px;
+	bottom: 20px;
+	content: "";
+	display: block;
+}
+.burger::after, .burger::before, .burger {
+	transition: all .3s ease-in-out;
+	-webkit-transition: all .3s ease-in-out;
+}
+.burger-menu.menu-on .burger::after{
+	transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
+	bottom: 0px;
+}
+.burger-menu.menu-on .burger::before{
+	transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	top: 0px;
+}
+.burger-menu.menu-on .burger{
+ background: rgba(111,111,111,.0);
+}
+
+.burger-menu:hover{
+	opacity: 0.6;
+}
+/*-----burgermenu-----*/
+
+.asidemenu{
+	width: 100%;
+	position: absolute;
+	right: 0;
+	left: 0;
+	top: 70.28px;
+	background: #E0E0E0;
+	transform: translateY(-130%);
+	transition: 1s;
+	opacity: 0.95;
+}
+
+.asidemenu.open{
+	transform: translateY(0px);
+}
+
+.asidemenu ul li div{
+	padding: 10px 0px;
+	border-bottom: 1px solid #767676;
+	text-align: center;
+}
+
+.asidemenu ul li a{
+	color: #000;
+	font-weight: bold;
+}
+
+.asidemenu ul li small{
+	color: #F84661;
+}
+
+.asidemenu ul li div:hover{
+	background: #767676;
+}
+
+.asidemenu ul li ul{
+	display: none;
+}
+
+.asidemenu ul li ul li{
+	padding: 10px 0; 
+	text-align: center;
+	border-bottom: 1px solid #fff;
+}
+
+.asidemenu ul li ul li a{
+	font-size: 14px;
+	color: gray;
+}
+
+.asidemenu ul li ul li i{
+	/*color: #F84661;*/
+}
+
+.asidemenu ul li ul li:hover{
+	opacity: 0.6;
+}
+
+@media(max-width: 1000px){
+	.header-warp{
+		padding: 0px 25px;
+	}
+
+}
+
+@media(max-width: 768px){
+	.header{
+		position: fixed;
+		background: #C50B1B;
+		right: 0;
+		left: 0;
+		z-index: 100;
+	}
+	.header-warp h1 a{
+		width: 125px;
+		height: 70.28px;
+		background-size: 100%;
+	}
+	.header-warp ul{
+		padding: 20px 90px 0px 0px;
+	}
+	.header-warp ul li{
+		float: right;
+		padding: 5px 10px;
+	}
+	.burger-menu{
+		display: block;
+	}
+}
+@media(max-width: 414px){
+	.header-warp ul{
+		display: none;
+	}
+} 
+@media(max-width: 375px){
+	
+} 
+@media(max-width: 320px){
+	
+}
+
+.topmenu a{
+	text-decoration: none;
+}
+
+.topmenu ul li{
+	float: left;
+	width: 16.666%;
+	text-align: center;
+	padding: 10px 0;
+	position: relative;
+}
+
+.topmenu ul li div{
+	border-right: solid 1px #F84661;
+}
+
+.topmenu ul li div:hover{
+	background-image: url(../images/cocacola-logo6-1.png);
+	background-size: 100%;
+	background-position: 0 40%;
+	background-repeat: no-repeat;
+}
+
+.topmenu ul li .menu-first{
+	border-left: solid 1px #F84661;
+}
+
+.topmenu ul li h2{
+	color: #1F2023;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.topmenu ul li small{
+	color: #F84661;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.topmenu ul li ul{
+	position: absolute;
+	top: 100%;
+	background: rgba(255%,255%,255%,0.6);
+	border-radius: 6px;
+	z-index: 50;
+	display: none;
+}
+
+.topmenu ul li ul li{
+	width: 145.55px;
+	text-align: left;
+	float: none;
+	padding: 10px 10px;
+	border-bottom: solid 1px #fff; 
+}
+
+.topmenu ul li ul .dropdown-end{
+	border-bottom: none;
+}
+
+.topmenu ul li ul li a{
+	color: #1F2023;
+}
+
+.topmenu ul li ul li a:hover{
+	opacity: 0.6;
+}
+
+.topmenu ul li ul li i{
+	color: #F84661;
+}
+
+.topmenu ul li:hover ul{
+	display: block;
+}
+
+@media(max-width: 768px){
+	.topmenu{
+		display: none;
+	}
+}
+
+.content{
+	width: 100%;
+	/*height: 1000px;*/
+	/*background: #cccccc;*/
+}
+
+@media(max-width: 768px){
+	.content{
+		margin-top: 70.28px;
+	}
+}
+
+.search{
+	padding: 20px 0;
+}
+
+.search .pure-form{
+	display: table;
+	margin: 0 auto;
+}
+
+.search .pure-button{
+	width: 30.83px;
+	height: 30.83px;
+	border-radius: 50%;
+	cursor: pointer;
+	border: none;
+	background: #E5232F;
+	color: #cccccc;
+	opacity: 0.7;
+	margin-left: 5px;
+}
+
+.search .pure-button:hover{
+	opacity: 1;
+}
+
+@media(max-width: 414px){
+	.search form .pure-input-rounded{
+		display: inline;
+		margin-bottom: 0; 
+	}
+	.search form .pure-button{
+		/*display: inline;*/
+		margin: 0 0 0 5px; 
+	}
+}
+
+.aside{
+	width: 178px;
+	/*height: 500px;*/
+	float: left;
+	padding: 10px;
+	border: solid 1px #cccccc;
+	border-radius: 6px;
+}
+
+.aside h3{
+	text-align: center;
+	font-weight: bold;
+	font-size: 20px;
+	padding: 10px 0px;
+}
+
+.aside li span{
+	float: right;
+	color: gray;
+}
+
+.aside ul li i{
+	transition: 0.5s;
+}
+
+.aside ul li{
+	color: #000;
+	/*font-weight: bold;*/
+	padding: 10px 0px;
+	border-bottom: solid 1px #E5232F;
+	cursor: pointer;
+}
+
+.aside ul li:hover i{
+	/*background: #E5232F;*/
+	color: #E5232F;
+	transform: rotate(90deg)
+}
+
+.aside ul li ul{
+	display: none;
+	padding-top: 10px;
+}
+
+.aside ul li ul li{
+	border: none;
+	padding: 5px 20px;
+	color: #52565e;
+}
+
+.aside ul li ul li:hover{
+	background: #cccccc;
+	color: #fff;
+}
+
+@media(max-width: 414px){
+	.aside{
+		width: 89%;
+		padding: 5%;
+		border: solid 1px #cccccc;
+		border-radius: 6px;
+	}
+}
+
+.shop{
+	max-width: 80%;
+	/*height: 700px;*/
+	/*background: green;*/
+	/*float: left;*/
+	margin-left: 200px; 
+}
+
+.shop-content span{
+	position: absolute;
+	bottom: 15px;
+	font-size: 18px;
+	color: #E5232F;
+	font-weight: bold;
+}
+
+.shop li{
+	width: 32.08333%;
+	/*height: 100px;*/
+	margin-left: 1%;
+	margin-bottom: 20px;
+	/*border: 1px solid #cccccc;*/
+	border-radius: 6px;
+	float: left;
+	overflow: hidden;
+	box-shadow: 0px 3px 5px #989898;
+	transition: 0.5s;
+}
+
+.shop li:hover{
+	transform: translateY(-5px);
+}
+
+.shop-photo{
+	height: 140px;
+	overflow: hidden;
+	position: relative;
+}
+
+.shop-content{
+	height: 160px;
+	padding: 10px 15px 15px 15px;
+	position: relative;
+}
+
+.shop-content h4{
+	font-weight: bold;
+	font-size: 18px;
+	text-align: center;
+}
+
+.shop-content p{
+	padding: 10px 0;
+	height: 50px;
+}
+
+.score_form{
+	position: absolute;
+	bottom: 15px;
+	right: 15px;
+}
+
+.shop-favorite{
+	color: #cccccc;
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	font-size: 24px;
+	cursor: pointer;
+}
+
+.shop-favorite:hover{
+	color: #E5232F;
+}
+
+@media(max-width: 768px){
+	
+} 
+@media(max-width: 414px){
+	.shop{
+		max-width: 100%;
+		margin-left: 0;
+	}
+	.shop li{
+		width: 89%;
+		margin: 3% 5% 3% 5%;
+	}
+	
+} 
+@media(max-width: 375px){
+	
+} 
+@media(max-width: 320px){
+	
+}
+
+/*-----star-----*/
+
+/*rese*/
+input {
+	margin: 0;
+}
+
+.star_evaluate{
+	position: relative;
+	width: 100px;
+	height: 20px;
+	background: url("../images/star-regular.svg") repeat-x;
+	background-size: 20px 20px;
+	overflow: hidden;
+}
+
+.star, .score{
+	display: block;
+	height: 20px;
+	width: 20px;
+	position: absolute;
+}
+.star{
+	z-index: 2;
+}
+.score{
+	opacity: 0;
+}
+
+.star_1, .score_1 {
+	left: 0;
+}
+
+.star_2, .score_2 {
+	left: 20px;
+}
+
+.star_3, .score_3 {
+	left: 40px;
+}
+
+.star_4, .score_4 {
+	left: 60px;
+}
+
+.star_5, .score_5 {
+	left: 80px;
+}
+
+/*懸浮*/
+.star:hover {
+	cursor: pointer;
+	background: url("../images/star-solid.svg") repeat-x;
+	background-size: 20px 20px;
+	left: 0;
+	z-index: 1;
+}
+
+.star_1:hover {
+	width: 20px;
+}
+
+.star_2:hover {
+	width: 40px;
+}
+
+.star_3:hover {
+	width: 60px;
+}
+
+.star_4:hover {
+	width: 80px;
+}
+
+.star_5:hover {
+	width: 100px;
+}
+
+/*選擇*/
+.score:checked + .star {
+	background: url("../images/star-solid.svg") repeat-x;
+	background-size: 20px 20px;
+	left: 0;
+}
+
+.score_1:checked + .star_1 {
+	width: 20px;
+}
+
+.score_2:checked + .star_2 {
+	width: 40px;
+}
+
+.score_3:checked + .star_3 {
+	width: 60px;
+}
+
+.score_4:checked + .star_4 {
+	width: 80px;
+}
+
+.score_5:checked + .star_5 {
+	width: 100px;
+}
+
+/*-----star-----*/
+
+.footer{
+	background: #C50B1B;
+	right: 0;
+	left: 0;
+}
+
+.footer-warp{
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 20px 0px;
+}
+
+.about{
+	width: 170px;
+	float: left;
+}
+
+.about h3{
+	color: #fff;
+	font-size: 16px;
+	font-weight: bold;
+	margin-bottom: 10px; 
+}
+
+.about p{
+	font-size: 14px;
+	text-align: justify;
+	line-height: 1.3;
+	color: #ccc;
+}
+
+.connect{
+	padding-left: 40px;
+	width: 30%;
+	float: left;
+}
+
+.connect ul li a{
+	font-size: 14px;
+	line-height: 1.3;
+	color: #ccc;
+	text-decoration: none;
+}
+
+.connect ul li a:hover{
+	opacity: 0.6;
+}
+
+.connect h3{
+	color: #fff;
+	font-size: 16px;
+	font-weight: bold;
+	margin-bottom: 10px; 
+}
+
+.remarks{
+	font-size: 12px;
+	float: right;
+	color: #fff;
+}
+
+.remarks p a{
+	color: #ccc;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.remarks p a:hover{
+	opacity: 0.6;
+}
+
+.remarks span{
+	letter-spacing: 3px;
+}
+
+@media(max-width: 1000px){
+	.footer-warp{
+		padding: 10px 10px;
+	}
+	.connect{
+		padding-bottom: 20px;
+	}
+}
+
+@media(max-width: 768px){
+	.connect{
+		padding-bottom: 40px;
+	}
+}
+
+.pagetop a{
+	width: 60px;
+	height: 60px;
+	background-image: url(../images/pagetop.png);
+	background-size: 100%;
+	position: fixed;
+	right: 5px;
+	bottom: 70px;
+	z-index: 99;
+}
+
+.pagetop:hover{
+	opacity: 0.6;
+}
+
+.shopbtn a{
+	width: 56px;
+	height: 56px;
+	background: #F84661;
+	border: solid 2px #E0E0E0; 
+	border-radius: 6px;
+	position: fixed;
+	right: 5px;
+	bottom: 5px;
+	z-index: 99;
+}			
+
+.shopbtn i{
+	font-size: 32px;
+	padding-left: 8px;
+	color: #fff;
+	line-height: 1.75;
+}
+
+.shopbtn a:hover{
+	opacity: 0.6;
+}
