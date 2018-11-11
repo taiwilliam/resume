@@ -1,0 +1,190 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body{
+    font-family: 微軟正黑體;!important
+}
+
+.header{
+    background: #5BBDA9;
+	right: 0;
+    left: 0;
+    padding: 25px 0px;
+}
+    
+.header-warp{
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+.header h1{
+    font-family: 微軟正黑體;
+    font-size: 48px;
+    color: #ffffff;
+}
+
+.header ul li a{
+    font-family: 微軟正黑體;
+    font-size: 18px;
+    float: right;
+    margin: 0 10px;
+    color: #ffffff;
+}
+
+.header ul li:hover{
+    opacity: 0.6;
+}
+
+.content-warp{
+    max-width: 1000px;
+	margin: 0 auto;
+}
+
+.content-warp div{
+    /* float: left; */
+    max-width: 50%;
+    border-radius: 6px;
+    overflow: hidden;
+    /* box-shadow: 0px 3px 5px #cccccc; */
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #5BBDA9;
+}
+
+.content-warp div h2{
+    font-family: 微軟正黑體;
+    font-size: 20px;
+    color:  #000000;
+    margin: 0 0 10px 0;
+}
+
+.content-warp div a{
+    font-family: 微軟正黑體;
+    font-size: 18px;
+    color:  #5BBDA9;
+    margin: 0 20px;
+    text-decoration: none;
+}
+
+.content-warp div a i{
+    padding:0 5px; 
+}
+
+.content-warp div p{
+    font-family: 微軟正黑體;
+    font-size: 16px;
+    line-height: 1.5;
+    padding: 16px;
+}
+
+.content-warp div span{
+    font-weight: bold; 
+    color: gray;
+}
+
+.content-warp div a:hover{
+    opacity: 0.6;
+}
+
+.footer{
+    background: #5BBDA9;
+	right: 0;
+    left: 0;
+    height: 100px;
+    padding: 25px 0px;
+}
+    
+.footer-warp{
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+.about{
+	width: 170px;
+	float: left;
+}
+
+.about h3{
+	color: #fff;
+	font-size: 16px;
+	font-weight: bold;
+	margin-bottom: 10px; 
+}
+
+.about p{
+	font-size: 14px;
+	text-align: justify;
+	line-height: 1.3;
+	color: #ccc;
+}
+
+.connect{
+	padding-left: 40px;
+	width: 30%;
+	float: left;
+}
+
+.connect ul li a{
+	font-size: 14px;
+	line-height: 1.3;
+	color: #ccc;
+    text-decoration: none;
+}
+
+.connect ul li a:hover{
+	opacity: 0.6;
+}
+
+.connect h3{
+	color: #fff;
+	font-size: 16px;
+	font-weight: bold;
+	margin-bottom: 10px; 
+}
