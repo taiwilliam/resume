@@ -1,0 +1,232 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* css recet */
+
+body{
+  background-color: rgb(0,0,0);
+  text-align: center;
+  padding: 40px 0 0 0; 
+}
+
+.box{
+  height: 50px;
+}
+
+.title{
+  height: 100px;
+  width: 100px;
+  /* background: #7a7a7a; */
+  background: linear-gradient(45deg,#7a7a7a,#fff);
+  border-radius: 50%;
+  padding: 10px 10px 10px 10px;
+  margin: 0 auto 50px auto;
+}
+
+h1{
+  font-size: 36px;
+  color: #fff;
+  /* letter-spacing: 1px; */
+  font-family: 'Asap', 微軟正黑體;
+  line-height: 40px;
+  margin-top: 10px;
+}
+
+output{
+  display: inline-block;
+  min-width: 30px;
+}
+
+label, output{
+  padding: 2px 9px;
+  border-radius: 5px;
+  font-family: 'Asap', 微軟正黑體;
+  color: #7a7a7a;
+  font-size: 16px;
+}
+
+label{
+  padding: 0px 10px;
+  border-radius: 50%;
+  font-size: 16px;
+}
+
+label[for=r], output[for=r]{
+  /* background-color: #f00; */
+}
+label[for=g], output[for=g]{
+  /* background-color: #0f0; */
+}
+label[for=b], output[for=b]{
+  /* background-color: #00f; */
+}
+
+#hex{
+  margin-top: 20px;
+}
+
+/* range樣式 */
+
+input[type="range"] {
+  -webkit-appearance: none;
+  outline : none;
+  width: 175px;
+  height: 2px;
+  background: #E0E3DA;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  top: -4px;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  background: #7a7a7a;
+  position: relative;
+  border: 3px solid #E0E3DA;
+  z-index: 3;
+  cursor: pointer;
+}
+
+#r[type="range"]::-webkit-slider-thumb{
+  background: #ff0000;
+}
+#g[type="range"]::-webkit-slider-thumb{
+  background: #00ff00;
+}
+#b[type="range"]::-webkit-slider-thumb{
+  background: #0000ff;
+}
+
+#hex{
+  width: 200px;
+  font-size: 48px;
+  background: linear-gradient(#fff,#7a7a7a);
+  cursor: pointer;
+  position:relative;
+}
+
+#hex:hover{
+  opacity: 0.6;
+}
+
+#hex:active{
+  top: 2px;  
+}
+
+/* range樣式 */
+
+.sent{
+  padding: 20px 0px;
+}
+
+.setName{
+  width: 95px;
+  height: 20px;
+  border: none;
+  border-radius: 5px;
+  padding-left: 5px;
+
+}
+
+.getName li{
+  width: 100px;
+  /* height: 25px; */
+  padding: 10px;
+  background: #cccccc;
+  border-radius: 10px;
+  margin: 10px auto;
+  font-family: 'Asap', 微軟正黑體;
+}
+
+.send{
+  font-family: 微軟正黑體;
+  width: 50px;
+  height: 25px;
+  border: none;
+  border-radius: 10px;
+  background: #00ff00;
+}
+
+.list li span{
+  display: inline-block;
+  height: 20px;
+  width: 110px;
+  padding: 5px 10px 9px 10px;;
+  margin: 20px auto 0 auto;
+  font-size: 24px;
+  font-family: 'Asap', 微軟正黑體;
+  background: linear-gradient(#fff,#7a7a7a);
+  border-radius: 5px;
+  color: #7a7a7a;
+  text-align: justify;
+  /* cursor: pointer; */
+}
+
+.list li a{
+  padding-right: 3px;
+  text-decoration: none;
+  font-size: 24px;
+  font-family: 'Asap', 微軟正黑體;
+  border-radius: 50%;
+  margin-right: 5px;
+  color: #7a7a7a;
+  /* line-height: 0.85; */
+}
+
+.list li a:hover{
+  color: #ff0000;
+  opacity: 0.6;
+}
+  
+.footer{
+  height: 50px;
+}
