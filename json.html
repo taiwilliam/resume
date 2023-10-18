@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Json demo</title>
+    <script
+  src="https://code.jquery.com/jquery-3.7.1.slim.js"
+  integrity="sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc="
+  crossorigin="anonymous"></script>
+    <script src="
+    https://cdn.jsdelivr.net/npm/jsonview@1.2.0/dist/jquery.jsonview.min.js
+    "></script>
+    <link href="
+    https://cdn.jsdelivr.net/npm/jsonview@1.2.0/dist/jquery.jsonview.min.css
+    " rel="stylesheet">
+  </head>
+  <body>
+
+    <!-- <div id="json"></div> -->
+    <h2>k and w line message record statistics [json]</h2>
+    <div id="json-collasped"></div>
+
+  </body>
+
+  <script>
+    var json = {
+      "2023-10-18": {
+        "caller": "william",
+        "response": "true",
+        "first": "https://ws.hsinchu.gov.tw/001/Upload/1/opendata/8774/2170/941b2959-4902-4c15-bd2c-b919af376066.json",
+      },
+      "2023-10-17": {
+        "caller": "kayen",
+        "response": "true",
+        "first": {
+          "type": "emoji",
+          "value": ""
+        },
+      },
+      "2023-10-16": {
+        "caller": "william",
+        "response": "true",
+        "first": {
+          "type": "emoji",
+          "value": ""
+        },
+      },
+      "2023-10-15": {
+        "caller": "william",
+        "response": "true",
+        "first": {
+          "type": "emoji",
+          "value": ""
+        },
+      },
+      "2023-10-14": {
+        "caller": "william",
+        "response": "true",
+        "first": {
+          "type": "text",
+          "value": "如何 兩點半結束?"
+        }
+      },
+      "2023-10-13": {
+        "caller": "william",
+        "response": "true",
+        "first": {
+          "type": "photo",
+          "value": ""
+        },
+      },
+      "2023-10-12": {
+        "caller": "william",
+        "response": "true",
+        "first": {
+          "type": "photo",
+          "value": ""
+        },
+      },
+      "2023-10-11": {
+        "caller": "kayen",
+        "response": "true",
+        "first": {
+          "type": "text",
+          "value": "請問"
+        }
+      },
+      "2023-10-10": {
+        "caller": "kayen",
+        "response": "true",
+        "first": {
+          "type": "text",
+          "value": "一直都是"
+        }
+      },
+      "2023-10-9": {
+        "caller": "william",
+        "response": "true",
+        "first": {
+          "type": "photo",
+          "value": ""
+        },
+      },
+      "2023-10-8": {
+        "caller": "kayen",
+        "response": "true",
+        "first": {
+          "type": "text",
+          "value": "我會在這 或看你在哪我去找你"
+        }
+      },
+    };
+
+    $(function() {
+      $("#json").JSONView(json);
+      // with options
+      $("#json-collasped").JSONView(json, { collapsed: false });
+    });
+
+  </script>
+</html>
